@@ -1,0 +1,8 @@
+@startuml
+autonumber
+InnerClassSingleton o->  SingletonInstance:getInstance
+activate InnerClassSingleton
+activate SingletonInstance
+SingletonInstance /->"new InnerClassSingleton()":类加载时生成实例
+SingletonInstance-->InnerClassSingleton :返回实例
+@enduml
